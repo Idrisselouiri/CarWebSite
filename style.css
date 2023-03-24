@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Luckiest+Guy&family=Montserrat:wght@100;300;500;700&family=Nunito+Sans:wght@200&family=Open+Sans:wght@300;400;500;700&display=swap');
+
+:root{
+    --main-color:#fe5b3d;
+    --second-color : #ffac38;
+    --text-color:#444;
+    --gradient-color:linear-gradient(#fe5b3d,#ffac38);
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+}
+header .logo img{
+    width: 40px;
+}
+header .navbar{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+header .navbar li{
+    position: relative;
+}
+header .navbar li a{
+    color: #000;
+    font-size: 16px;
+}
+header .navbar li a::after{
+    content: '';
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+header .navbar li a:hover:after{
+    width: 100%;
+}
+header .box-signup{
+    display: flex;
+    column-gap: 20px;
+}
+header .box-signup button{
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 6px;
+}
+header .box-signup .Sign-in{
+    background-color: royalblue;
+    color: white;
+}
+header .box-signup .Sign-up:hover{
+    background-color: royalblue;
+}
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: url(/Car\ Rentel\ Website\ Images//img/CarWebsite.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+}
+.home .text-home{
+    margin: 0 50px;
+}
+.home .text-home h1{
+    font-size: 3.5rem;
+    letter-spacing: .5px;
+}.home .text-home h1 span{
+    color: var(--main-color);
+}
+.home .text-home p{
+    padding: 20px 10px;
+    line-height: 30px;
+}
+.home .box-app{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.home .box-app img{
+    width: 100px;
+}
+.form-container form{
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+.form-container form .input-box{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.form-container form .input-box input{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: #eeeff1;
+    margin-top: 5px;
+    border-radius: 6px;
+}
+.form-container form button{
+    background-color:royalblue;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    font-size: 18px;
+    color: #fff;
+}
