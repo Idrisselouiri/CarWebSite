@@ -138,3 +138,96 @@ header .box-signup .Sign-up:hover{
     font-size: 18px;
     color: #fff;
 }
+.heading{
+    text-align: center;
+    margin-top: 50px;
+    line-height: 40px;
+}
+.heading p{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.heading h1{
+    font-size: 2rem;
+}
+.Ride{
+    padding: 0 30px;
+}
+.box-container{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px , auto));
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.box-container .box{
+    margin-right: 10px;
+}
+.box-container .box i{
+    font-size: 32px;
+    padding: 12px;
+    background-color: #e2e1e1;
+    color: var(--main-color);
+}
+.box-container .box i:hover,
+.box-container .box #calendar
+{
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 6px;
+}
+.box-container .box h3{
+    padding: 20px 0;
+}
+.services{
+    padding: 0 30px;
+}
+.container-images{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , auto));
+    gap:2rem;
+}
+.container-images .box .img{
+    width: 100%;
+    height: 200px;
+    padding-bottom: 30px;
+}
+.container-images .box .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-position: center;
+    object-fit: cover;
+}
+.container-images .box{
+    padding: 10px;
+    background-color: #eeeff1;
+}
+.container-images .box a{
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+    color: black;
+}
+.container-images .box p{
+    padding: 20px 0 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.container-images .box h3{
+    color: var(--main-color);
+    font-size: 18px;
+}
+.container-images .box button{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: royalblue;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+}
