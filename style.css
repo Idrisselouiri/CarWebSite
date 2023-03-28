@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Luckiest+Guy&family=Montserrat:wght@100;300;500;700&family=Nunito+Sans:wght@200&family=Open+Sans:wght@300;400;500;700&display=swap');
 
 :root{
-    --main-color:#fe5b3d;
+    --main-color:rgb(245, 4, 4);
     --second-color : #ffac38;
     --text-color:#444;
     --gradient-color:linear-gradient(#fe5b3d,#ffac38);
@@ -12,6 +12,9 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
+}
+section{
+    padding: 0 20px;
 }
 header{
     z-index: 1000;
@@ -26,19 +29,29 @@ header{
     padding: 15px 0;
 }
 header .logo img{
-    width: 40px;
+    width: 50px;
+}
+.hamburger-menu{
+    display: none;
+    cursor: pointer;
+}
+.hamburger-menu .bar{
+    display: block;
+    background-color: black;
+    width: 24px;
+    height: 3px;
+    margin: 5px 0;
 }
 header .navbar{
     display: flex;
-    align-items: center;
-    column-gap: 40px;
+    column-gap: 30px;
 }
 header .navbar li{
     position: relative;
 }
 header .navbar li a{
     color: #000;
-    font-size: 16px;
+    font-size: 18px;
 }
 header .navbar li a::after{
     content: '';
@@ -58,7 +71,7 @@ header .box-signup{
 header .box-signup button{
     padding: 10px 15px;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     background-color: transparent;
     border-radius: 6px;
 }
@@ -69,28 +82,23 @@ header .box-signup .Sign-in{
 header .box-signup .Sign-up:hover{
     background-color: royalblue;
 }
-
 .home{
-    width: 100%;
     min-height: 100vh;
-    background: url(/Car\ Rentel\ Website\ Images//img/CarWebsite.png);
-    background-position: center right;
+    background: url("/img/Background-home.png");
+    background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: repeat(2,1fr);
-}
-.home .text-home{
-    margin: 0 50px;
 }
 .home .text-home h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
     letter-spacing: .5px;
 }.home .text-home h1 span{
     color: var(--main-color);
 }
 .home .text-home p{
+    font-size: 20px;
     padding: 20px 10px;
     line-height: 30px;
 }
@@ -100,7 +108,7 @@ header .box-signup .Sign-up:hover{
     column-gap: 15px;
 }
 .home .box-app img{
-    width: 100px;
+    width: 120px;
 }
 .form-container form{
     position: absolute;
@@ -150,10 +158,11 @@ header .box-signup .Sign-up:hover{
 .heading h1{
     font-size: 2rem;
 }
-.Ride{
-    padding: 0 30px;
-}
+
+/* box-container*/
 .box-container{
+    width: 90%;
+    margin: auto;
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(250px , auto));
@@ -181,14 +190,17 @@ header .box-signup .Sign-up:hover{
 .box-container .box h3{
     padding: 20px 0;
 }
-.services{
-    padding: 0 30px;
-}
+
+/* images-container*/
 .container-images{
+    width: 90%;
+    margin: auto;
     margin-top: 50px;
     display: grid;
+    justify-content: space-between;
+    align-items: center;
     grid-template-columns: repeat(auto-fit , minmax(300px , auto));
-    gap:2rem;
+    gap:1rem;
 }
 .container-images .box .img{
     width: 100%;
@@ -211,6 +223,7 @@ header .box-signup .Sign-up:hover{
     border-radius: 6px;
     border: 1px solid black;
     color: black;
+    width: fit-content;
 }
 .container-images .box p{
     padding: 20px 0 10px 0;
@@ -230,4 +243,148 @@ header .box-signup .Sign-up:hover{
     border: none;
     border-radius: 6px;
     margin-top: 10px;
+}
+
+/* about-container*/
+.container-about{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px , auto));
+    align-items: center;
+    gap: 2rem;
+}
+.about-image img{
+    width: 100%;
+}
+.about-text h4{
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+.about-text p{
+    padding: 20px 0;
+}
+.about-text a{
+    padding: 8px 16px;
+    background-color: royalblue;
+    color: white;
+    border-radius: 6px;
+}
+
+
+/*make a media query*/
+
+@media (max-width:855px){
+    header .logo img{
+        width: 40px;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    .hamburger-menu.isActive .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger-menu.isActive .bar:nth-child(1){
+        transform: translateY(8px)  45deg;
+    }
+    .hamburger-menu.isActive .bar:nth-child(3){
+        transform: translateY(-8px)  -45deg;
+    }
+    header .navbar{
+        position: fixed;
+        left: -100%;
+        top: 65px;
+        background-color: white;
+        width: 100%;
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+    }
+    header .navbar.isActive{
+        left: 0;
+    }
+    header .navbar li{
+        position: relative;
+    }
+    header .navbar li a{
+        padding: 1rem ;
+        color: #000;
+        margin: 0 20px;
+        font-size: 18px;
+        border-left: 2px solid var(--main-color);
+    }
+    header .navbar li a:hover{
+        border: none;
+        background-color: var(--main-color);
+        border-radius: 6px;
+        color: white;
+    }
+    header .navbar li a::after{
+        display: none;
+    }
+
+    .home{
+        min-height: 100vh;
+        background: url("/img/Background-home.png");
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .home .text-home h1{
+        font-size: 2.5rem;
+    }
+    .home .text-home p{
+        font-size: 18px;
+    }
+    .home .box-app img{
+        width: 100px;
+    }
+    .form-container form{
+        width: 80%;
+        bottom:.5rem;
+        left:50%;
+        transform: translateX(-50%);
+        padding: 10px;
+    }
+    .form-container form .input-box{
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        width: 40%;
+    }
+}
+@media (max-width:601px){
+    .home .text-home{
+        position: absolute;
+        top: 20%;
+    }
+    .home .text-home h1{
+        font-size: 1.8rem;
+    }
+    .home .text-home p{
+        font-size: 16px;
+    }
+    .form-container form{
+        width:80%;
+        position: absolute;
+        bottom:0;
+        left: 50%;   
+        transform: translateX(-50%);
+        padding: 0; 
+    }
+    .form-container form .input-box{
+        margin: auto;
+        margin-top: 25px;
+        width: 90%;
+    }
+    .form-container form .input-box input{
+        padding: 8px 16px;
+        margin-top: 5px;
+    }
+    .form-container form button{
+        margin-top: 20px;
+    }
 }
